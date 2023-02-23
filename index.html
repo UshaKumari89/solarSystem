@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Solar System</title>
+    <script
+      src="https://kit.fontawesome.com/d3e1f8ffba.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Solar system</title>
   </head>
   <body>
-   
+
+    <div class="home-div">
+      <!--header section-->
+      <header class="header">
+        <h1 class="heading1">Solar system</h1>
+        <h2 class="heading2">Solris</h2>
+      </header>
+      <!--search section-->
+      <section class="search">
+        <input type="text" class="search-planet" placeholder="search planet"  />
+        <button class="search-button"><i class="fas fa-search"></i></button>
+      </section>
+      <div class="not-found"></div>
+  <!--main section-->
+      <main>
+        <section class="planets">
+          <a href="/info.html"><article id="planet_0" class="planets_solar_system sun"></article></a>
+          <a href="/info.html"><article id="planet_1" class="planets_solar_system"></article>Merkurius</a>
+          <a href="/info.html"><article id="planet_2" class="planets_solar_system"></article>Venus</a>
+          <a href="/info.html"><article id="planet_3" class="planets_solar_system"></article>Jorden</a>
+          <a href="/info.html"><article id="planet_4" class="planets_solar_system"></article>Mars</a>
+          <a href="/info.html"><article id="planet_5" class="planets_solar_system"></article>Jupiter</a>
+          <a href="/info.html"><article id="planet_6" class="planets_solar_system"></article>Saturn</a>
+          <a href="/info.html"><article id="planet_7" class="planets_solar_system"></article>Uranus</a>
+          <a href="/info.html"><article id="planet_8" class="planets_solar_system"></article>Neptunus</a>
+ 
+        </section>
+      </main>
+   </div>
+        <!--section for the planet data when you search-->
+     <section class="planet-info hide">
+      <div><button class="home-btn">Back to Home</button></div>
+      <div class="planet-data"></div>
+    </section>
+
+    <script type="module" src="main.js" defer></script>
   </body>
 </html>
