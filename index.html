@@ -12,7 +12,6 @@
     <title>Solar system</title>
   </head>
   <body>
-
     <div class="home-div">
       <!--header section-->
       <header class="header">
@@ -21,29 +20,66 @@
       </header>
       <!--search section-->
       <section class="search">
-        <input type="text" class="search-planet" placeholder="search planet"  />
+        <input type="text" class="search-planet" placeholder="search planet" />
         <button class="search-button"><i class="fas fa-search"></i></button>
       </section>
       <div class="not-found"></div>
-  <!--main section-->
+      <!--main section-->
       <main>
         <section class="planets">
-          <a href="/info.html"><article id="planet_0" class="planets_solar_system sun"></article></a>
-          <a href="/info.html"><article id="planet_1" class="planets_solar_system"></article>Merkurius</a>
-          <a href="/info.html"><article id="planet_2" class="planets_solar_system"></article>Venus</a>
-          <a href="/info.html"><article id="planet_3" class="planets_solar_system"></article>Jorden</a>
-          <a href="/info.html"><article id="planet_4" class="planets_solar_system"></article>Mars</a>
-          <a href="/info.html"><article id="planet_5" class="planets_solar_system"></article>Jupiter</a>
-          <a href="/info.html"><article id="planet_6" class="planets_solar_system"></article>Saturn</a>
-          <a href="/info.html"><article id="planet_7" class="planets_solar_system"></article>Uranus</a>
-          <a href="/info.html"><article id="planet_8" class="planets_solar_system"></article>Neptunus</a>
- 
+          <a href="/info.html"
+            ><article id="planet_0" class="planets_solar_system sun"></article
+          ></a>
+          <a href="/info.html"
+            ><article id="planet_1" class="planets_solar_system"></article>
+            Merkurius</a
+          >
+          <a href="/info.html"
+            ><article id="planet_2" class="planets_solar_system"></article>
+            Venus</a
+          >
+          <a href="/info.html"
+            ><article id="planet_3" class="planets_solar_system"></article>
+            Jorden</a
+          >
+          <a href="/info.html"
+            ><article id="planet_4" class="planets_solar_system"></article>
+            Mars</a
+          >
+          <a href="/info.html"
+            ><article id="planet_5" class="planets_solar_system"></article>
+            Jupiter</a
+          >
+          <a href="/info.html"
+            ><article id="planet_6" class="planets_solar_system"></article>
+            Saturn</a
+          >
+          <a href="/info.html"
+            ><article id="planet_7" class="planets_solar_system"></article>
+            Uranus</a
+          >
+          <a href="/info.html"
+            ><article id="planet_8" class="planets_solar_system"></article>
+            Neptunus</a
+          >
         </section>
       </main>
-   </div>
-        <!--section for the planet data when you search-->
-     <section class="planet-info hide">
-      <div><button class="home-btn">Back to Home</button></div>
+    </div>
+    <!--section for the planet data when you search-->
+    <section class="planet-info hide">
+        <!--button for next and back planet-->
+      <section class="buttonsRightLeft">
+           <!--button for next planet-->
+        <button id="next-btn">
+          <i class="fa-sharp fa-solid fa-arrow-left search-button"></i>
+        </button>
+            <!--button for back planet-->
+        <button id="back-btn">
+          <i class="fa-sharp fa-solid fa-arrow-right search-button"></i>
+        </button>
+      </section>
+
+      <div><button class="home-btn hide">Back to Home</button></div>
       <div class="planet-data"></div>
     </section>
 

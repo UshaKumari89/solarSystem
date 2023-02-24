@@ -1,11 +1,11 @@
-import renderUi from '../module/renderUi.js';
+import {renderUi , updateUi} from '../module/renderUi.js';
+
 
 
 //onload function would be called when the page is loaded
 window.onload =()=>{
-  // console.log(planetsData);
   let currentPlanet = localStorage.getItem('planet')
-  console.log(currentPlanet);
+  // console.log(currentPlanet);
   clickElement(currentPlanet)
   }
   
@@ -18,12 +18,13 @@ let planetInfo = document.querySelector('.planet-info');
 let planetData = document.querySelector('.planet-data');
 let notFound = document.querySelector('.not-found');
 
+
 // fetch data from api and push it to planetsData array
  async function fetchData() {
   let resp = await fetch('https://majazocom.github.io/Data/solaris.json')
    let data = await resp.json();
    planetsData.push(...data);
-   console.log(data);
+  //  console.log(data);
    return data;
  }
  
@@ -52,7 +53,7 @@ if(!searchPlanet.value) {
   // find planet in planetsData array
   searchInfo = planetsData.find((planet) => {
     // if planet name is equal to input value return planet
-    if (planet.name === searchPlanet.value) {
+    if (planet.name.toLowerCase()=== searchPlanet.value.toLowerCase()) {
       return planet;
     }
   });
@@ -85,7 +86,7 @@ renderUi(searchInfo)
     planetInfo.classList.remove('hide');
     homePage.classList.add('hide');
   }
-  //   console.log(searchInfo);
+    console.log(searchInfo);
   
 })
 
@@ -134,7 +135,34 @@ onclick();
   
 
    container.appendChild(planetCard)
+   
+   onNextPlanetClick(planetCard)
+   onPreviousPlanetClick(planetCard)
+
  }
+
+ //Render UI...
+
+ let planetList = await fetchData()
  
+ // onPreviousPlanetClick button click
+ function onPreviousPlanetClick(currentPlanet) {
+  let nextBtn = document.querySelector('#next-btn');
+  nextBtn.addEventListener('click', () => {
+  planetId--
+  updateUi(planetId, planetList)
  
- 
+  
+  });
+}
+ // onNextPlanetClick button click
+let planetId = parseInt(localStorage.getItem('planet'))
+ function onNextPlanetClick(currentPlanet) {
+  let backBtn = document.querySelector('#back-btn');
+  backBtn.addEventListener('click', () => {
+  planetId++
+  updateUi(planetId, planetList)
+
+  });
+}
+

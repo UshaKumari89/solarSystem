@@ -16,15 +16,16 @@
     --clr-gradient: linear-gradient(to right, #111645, #190b23);
     --linear-gradient: Linear-gradient(-90deg, #0C164D 0%, #190B22 100%);
     --color-yellow: #FFD029;
-    --light-gray:  #888888;
+    --light-gray: #888888;
     --light-pink: #E7CDCD;
     --light-blue: #428ED4;
     --orange: #EF5F5F;
-    --light-orange:#E29468;
+    --light-orange: #E29468;
     --light-yellow: #C7AA72;
-    --gray-blue:#C9D4F1;
+    --gray-blue: #C9D4F1;
     --blue: #7A91A7
 }
+
 /* style for body */
 body {
     width: 100vw;
@@ -32,10 +33,14 @@ body {
     display: flex;
     justify-content: center;
 }
+
 /* home div  */
 .home-div {
     background: var(--clr-gradient);
+    background-image: url('../images/starr.jpg');
+    background-size: cover;
 }
+
 /* style header*/
 .header {
     display: flex;
@@ -54,6 +59,7 @@ body {
     color: var(--clr-primary);
     text-transform: uppercase;
 }
+
 /* style heading 2 */
 .heading2 {
     font-family: 'Lora';
@@ -64,11 +70,12 @@ body {
     text-transform: uppercase;
     text-align: right;
 }
+
 /* style search box in our planet page*/
 .search {
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 25%;
     transform: translate(-50%, -50%);
     background: var(--clr-primary);
     height: 2.5rem;
@@ -80,23 +87,25 @@ body {
     color: var(--clr-secondary);
 
 }
+
 /* style search  hover over  in our planet page*/
-.search:hover>.search-planet {
-    width: 300px;
-}
+/* .search:hover>.search-planet {
+    width: 200px;
+} */
 /* style search  button in our planet page */
 .search-button {
     color: var(--clr-secondary);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background:var(--color-yellow);
+    background: var(--color-yellow);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     outline: none;
 }
+
 /* style search  text in our planet page*/
 .search-planet {
     border: none;
@@ -105,8 +114,9 @@ body {
     color: var(--clr-secondary);
     font-size: 1rem;
     transition: ease-in 0.4s;
-    width: 110px;
+    width: 200px;
 }
+
 /* style for span tag with the class of not-sound*/
 .not-found {
     color: var(--clr-primary);
@@ -115,11 +125,13 @@ body {
     display: none;
     margin: 10rem 26rem;
 }
+
 /* style for main tag */
 main {
     margin-top: 10%;
 
 }
+
 /* style for planets */
 .planets {
     display: flex;
@@ -128,101 +140,150 @@ main {
     width: 100vw;
     height: 60vh;
 }
+
 /* style for planets hover over */
 .planets>a:hover {
- 
+
     transform: scale(0.9);
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
     -ms-transform: scale(0.9);
     -o-transform: scale(0.9);
 }
+
 .planets>a {
-color: var(--clr-primary);
-display: flex;
-flex-direction: column;
-align-items: center;
+    color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 /* style for planets article */
-.planets>a > article {
+.planets>a>article {
     border-radius: 50%;
 
 }
-.planets>a > article:hover {
-    border: 3px solid var(--clr-primary);
 
-}
 /* style for hide class which is used in js*/
 .hide {
     display: none;
 }
+
 /* style for show class which is used in js*/
 .show {
     display: block;
 }
+
 /* style for sun*/
 .sun {
     width: 600px;
     height: 600px;
-    background-color:var(--color-yellow);
+    background-color: var(--color-yellow);
     margin-left: -500px;
+    background-image: url('../images/sun.jpg');
+    background-position: center;
+    animation: spin 15s linear infinite;
+    -webkit-animation: spin 30s linear infinite;
 }
+
 /* style for planet 1*/
 #planet_1 {
-    width: 1rem;
-    height: 1rem;
-    background:var(--light-gray)
+    width: 2rem;
+    height: 2rem;
+    background: var(--light-gray);
+    background-image: url('../images/mercury.jpg');
+    background-position: center;
+    animation: spin 10s linear infinite;
+    -webkit-animation: spin 10s linear infinite;
 }
+
 /* style for planet 2*/
 #planet_2 {
-    width: 1.6rem;
-    height: 1.6rem;
-    background:var( --light-pink);
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--light-pink);
+    background-image: url('../images/VENUS.jpg.crdownload');
+    background-position: center;
+    background-size: cover;
+    animation: spin 6s linear infinite;
+    -webkit-animation: spin 6s linear infinite;
 }
+
 /* style for planet 3*/
 #planet_3 {
-    width: 1.8rem;
-    height: 1.8rem;
-    background:var(--light-blue);
-   
+    width: 3rem;
+    height: 3rem;
+    background: var(--light-blue);
+    background-image: url('../images/Earth.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: spin 6s linear infinite;
+    -webkit-animation: spin 14s linear infinite;
 }
+
 /* style for planet 4*/
 #planet_4 {
-    width: .8rem;
-    height: .8rem;
-    background:var(--orange)
-   
+    width: 4rem;
+    height: 4rem;
+    background: var(--orange);
+    background-image: url('../images/mars.jfif');
+    background-position: center;
+    background-size: cover;
+    animation: spin 7s linear infinite;
+    -webkit-animation: spin 17s linear infinite;
 }
+
 /* style for planet 5*/
 #planet_5 {
     width: 10rem;
     height: 10rem;
-    background:var(--light-orange);
-   
+    background: var(--light-orange);
+    background-image: url('../images/jupiter.jfif');
+    background-position: center;
+    animation: spin 8s linear infinite;
+    -webkit-animation: spin 18s linear infinite;
 }
+
 /* style for planet 6*/
 #planet_6 {
     width: 8.5rem;
     height: 8.5rem;
-    background:var(--light-yellow)
-   
+    background: var(--light-yellow);
+    background: url('../images/saturun.jpg') no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    animation: spin 3s linear infinite;
+    -webkit-animation: spin 19s linear infinite;
 }
+
 /* style for planet 7*/
 #planet_7 {
-    width: 3.2rem;
-    height: 3.2rem;
-    background:var(--gray-blue) ;
-   
+    width: 4rem;
+    height: 4rem;
+    background: var(--gray-blue);
+    background-image: url('../images/uranus.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: spin 12s linear infinite;
+    -webkit-animation: spin 12s linear infinite;
 }
+
 /* style for planet 8*/
 #planet_8 {
-    width: 2.4rem;
-    height:2.4rem;
-    background:var(--blue);
-   
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--blue);
+    background-image: url('../images/Neptune.webp');
+    background-position: center;
+    background-size: cover;
+    animation: spin 14s linear infinite;
+    -webkit-animation: spin 14s linear infinite;
 }
-/* style for planet heading 3*/
 
+/* style for planet heading 3*/
 h3 {
     font-family: 'Secular One';
     font-style: normal;
@@ -231,44 +292,124 @@ h3 {
     line-height: 100%;
     letter-spacing: 0.09em;
     margin-top: 2rem;
-} 
+}
+
 /* style for planet info*/
- .planet-info {
-    background:var( --linear-gradient);
+.planet-info {
+    background: var(--linear-gradient);
+    background-image: url('../images/starr.jpg');
+    background-size: cover;
     flex-wrap: wrap;
-    padding:5rem 10rem;
+    padding: 5rem 10rem;
     color: var(--clr-primary);
-    }
-  /* style for planet info paragraph*/
- .planet-info p {
+}
+
+/* style for planet info paragraph*/
+.planet-info p {
     letter-spacing: 0.16em;
     color: var(--clr-primary);
     font-family: 'Roboto Condensed';
     font-style: normal;
     margin: 1rem 0;
-  } 
-
-  /* style for back to home button*/
-  .home-btn{
-	box-shadow:inset 0px 1px 0px 0px var(--light-pink);
-	background-color:var(--clr-primary);
-	border-radius:11px;
-	border:2px solid var(--clr-primary);
-	cursor:pointer;
-	color:var(--clr-secondary);
-	font-family:Arial;
-	font-size:1rem;
-	font-weight:bold;
-	padding:.5rem 1rem;
-	text-shadow:0px 1px 0px var(--clr-primary);
-    transition: all 0.35s;
-  
-   
 }
-  /* style for back to home button hover over*/
-.home-btn:hover{
-    background-color:var(--color-yellow);
-    border:2px solid var(--color-yellow);
-    color:var(--clr-primary) ;
 
+/* style for back to home button*/
+.home-btn {
+    box-shadow: inset 0px 1px 0px 0px var(--light-pink);
+    background-color: var(--clr-primary);
+    border-radius: 11px;
+    border: 2px solid var(--clr-primary);
+    cursor: pointer;
+    color: var(--clr-secondary);
+    font-family: Arial;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    text-shadow: 0px 1px 0px var(--clr-primary);
+    transition: all 0.35s;
+}
+
+/* style for back to home button hover over*/
+.home-btn:hover {
+    background-color: var(--color-yellow);
+    border: 2px solid var(--color-yellow);
+    color: var(--clr-primary);
+}
+
+/* style for button next and back*/
+.buttonsRightLeft {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* style for back button*/
+#back-btn {
+    margin-left: 225px;
+}
+
+/* style for rotation */
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/*media query to make it responsive*/
+@media only screen and (max-width: 600px) {
+    /*Big smartphones [426px -> 600px]*/
+
+    body {
+
+        height: 1200px
+    }
+ /* style heading 1 */
+    .heading1 {
+
+        font-size: 2rem;
+
+    }
+
+    /* style heading 2 */
+    .heading2 {
+        text-align: center;
+
+
+    }
+    /* style planet*/
+    .planets {
+        flex-direction: column;
+        margin-top: 5rem;
+        width: 100vw;
+        height: 60vh;
+    }
+  /* style planet sun*/
+    .sun {
+        width: 100px;
+        height: 100px;
+        margin-top: 800px;
+        margin-left: 0px;
+    }
+  /* style planet info card*/
+    .planet-info {
+        padding: 2rem;
+    }
+
+    #back-btn {
+        margin-left: 350px;
+    }
 }
